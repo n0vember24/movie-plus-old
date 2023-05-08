@@ -1,1 +1,1 @@
-# Movie Plus
+![](https://wakatime.com/badge/user/b805ecb4-4a3d-4805-815f-410bf2e510c9/project/ec3312fe-6690-4859-89d7-97951b11fada.svg?style=flat-square)
