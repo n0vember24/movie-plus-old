@@ -14,6 +14,7 @@ INSTALLED_APPS = [
 	'django.contrib.messages',
 	'django.contrib.staticfiles',
 	'movies.apps.MoviesConfig',
+	'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -45,6 +46,8 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'config.wsgi.application'
+
+AUTH_USER_MODEL = 'users.User'
 
 DATABASES = {
 	'default': {
