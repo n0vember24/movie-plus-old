@@ -18,6 +18,9 @@ class Country(Model):
     name = CharField(max_length=100)
     alpha = SlugField(unique=True, max_length=3)
 
+    class Meta:
+        verbose_name_plural = 'Countries'
+
 
 class Movie(Model):
     allowed_video_extensions = ['mp4', 'mkv', 'avi', 'mov', 'webm']
