@@ -17,6 +17,7 @@ INSTALLED_APPS = [
 	'movies.apps.MoviesConfig',
 	'users.apps.UsersConfig',
 	'rest_framework',
+	'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -51,16 +52,26 @@ WSGI_APPLICATION = 'config.wsgi.application'
 
 AUTH_USER_MODEL = 'users.User'
 
+# Settings For Local Database
 DATABASES = {
 	'default': {
-		'ENGINE': 'django.db.backends.postgresql_psycopg2',
-		'USER': os.getenv('DB_USER'),
-		'PASSWORD': os.getenv('DB_PASSWORD'),
-		'NAME': os.getenv('DB_NAME'),
-		'HOST': os.getenv('DB_HOST'),
-		'PORT': os.getenv('DB_PORT'),
+		'ENGINE': 'django.db.backends.sqlite3',
+		'NAME': os.getenv('SQL_DB'),
 	}
 }
+
+# Settings For Postgres Database
+#
+# DATABASES = {
+# 	'default': {
+# 		'ENGINE': 'django.db.backends.postgresql_psycopg2',
+# 		'USER': os.getenv('DB_USER'),
+# 		'PASSWORD': os.getenv('DB_PASSWORD'),
+# 		'NAME': os.getenv('DB_NAME'),
+# 		'HOST': os.getenv('DB_HOST'),
+# 		'PORT': os.getenv('DB_PORT'),
+# 	}
+# }
 
 AUTH_PASSWORD_VALIDATORS = [
 	{'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
