@@ -1,0 +1,7 @@
+django
+djangorestframework
+psycopg2-binary
+pillow
+django-jazzmin
+drf-yasg
+djangorestframework-simplejwt
